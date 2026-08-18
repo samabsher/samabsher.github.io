@@ -1,0 +1,50 @@
+---
+title: "CV"
+pagetitle: "CV — Sam Absher"
+---
+
+Download the full CV as a PDF: [absher_cv.pdf](files/absher_cv.pdf)
+
+```{=html}
+<div class="section-label">Employment</div>
+<table class="table" style="max-width:44rem;">
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2025 –</td>
+      <td>Senior Consultant, Research &amp; Planning Consultants, LP</td></tr>
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2022 – 2025</td>
+      <td>Faculty, RAND School of Public Policy</td></tr>
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2019 – 2025</td>
+      <td>Associate Economist, RAND</td></tr>
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2018 – 2019</td>
+      <td>Postdoctoral Researcher, Free Market Institute at Texas Tech University</td></tr>
+</table>
+
+<div class="section-label">Education</div>
+<table class="table" style="max-width:44rem;">
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2018</td>
+      <td>Ph.D. Economics, University of Oklahoma<br>
+      <span style="color:var(--ink-soft); font-size:0.92em;">Dissertation: <em>Three Essays in Development and Applied Micro</em> (advisor: Kevin Grier)</span></td></tr>
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2013</td>
+      <td>B.A. Economics, University of Oklahoma</td></tr>
+</table>
+
+<div class="section-label">Awards</div>
+<table class="table" style="max-width:44rem;">
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2025</td><td>RAND Gold Medal Award</td></tr>
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2025</td><td>RAND Spotlight Award</td></tr>
+  <tr><td style="white-space:nowrap; color:var(--ink-mute);">2016</td><td>Chong Liew Summer Research Award</td></tr>
+</table>
+
+<div class="section-label">Skills</div>
+```
+
+R (including sf/ggplot2 for spatial analysis and mapping), Stata, SQL, LaTeX;
+LLM-assisted research workflows.
+
+```{=html}
+<div class="section-label">Professional service</div>
+```
+
+Referee for *Journal of Economic Behavior & Organization*, *Journal of Economic
+Growth*, *Public Choice*, *Journal of Peace Research*, and *Economics of
+Transition & Institutional Change*. Technical reviewer for the National
+Collaborative on Gun Violence Research (2020).

@@ -1,0 +1,58 @@
+---
+pagetitle: "Sam Absher — Economist"
+---
+
+::: {.column-page}
+
+```{=html}
+<div style="max-width:46rem; margin-top:1.5rem;">
+  <div class="kicker">Economist · Applied Microeconomics</div>
+  <h1 style="font-size:2.7rem; margin-bottom:1rem;">Sam Absher</h1>
+  <p class="lede">
+    I study what policies actually do to the people they touch — border
+    enforcement, regime change, revolutions, school quality — using the tools of
+    causal inference: synthetic control, regression discontinuity, and
+    difference-in-differences.
+  </p>
+  <p style="color:var(--ink-soft); max-width:42rem;">
+    I am a Senior Consultant at Research &amp; Planning Consultants, LP. Before
+    that I spent six years at RAND as an economist and taught microeconomics and
+    cost-benefit analysis at the RAND School of Public Policy. I hold a
+    Ph.D. in Economics from the University of Oklahoma.
+  </p>
+  <div class="paper-links" style="margin-top:1.2rem;">
+    <a href="mailto:sam.r.absher@gmail.com">Email</a>
+    <a href="https://scholar.google.com/citations?user=TODO">Google Scholar</a>
+    <a href="https://github.com/TODO-USERNAME">GitHub</a>
+    <a href="files/absher_cv.pdf">CV (PDF)</a>
+  </div>
+</div>
+```
+
+<div class="section-label">Featured</div>
+
+```{=html}
+<div class="paper-card" style="border-left:4px solid var(--clay);">
+  <h3><a href="research/fences-and-fortunes/">Fences and Fortunes: The Effect of Enhanced Border Enforcement on El Paso</a></h3>
+  <div class="meta">with Robin Grier and Kevin Grier · Under review</div>
+  <p class="abstract">
+    In 1993, Operation Hold the Line put a wall of Border Patrol agents between
+    El Paso and Ciudad Juárez. Crossings collapsed — and so did incomes, house
+    values, and business growth on the U.S. side. We estimate the operation's
+    causal effects and find its costs to El Paso swamped its benefits.
+  </p>
+  <div class="paper-links">
+    <a class="primary" href="research/fences-and-fortunes/">Read the data companion</a>
+    <a href="research.html">All research</a>
+  </div>
+</div>
+```
+
+<div class="section-label">Elsewhere</div>
+
+The [research page](research.qmd) lists journal articles, working papers, and
+policy reports. The [data page](data.qmd) has datasets I have constructed and
+replication files for published work. A one-page academic history is on the
+[CV page](cv.qmd).
+
+:::

@@ -1,0 +1,67 @@
+---
+title: "Data"
+pagetitle: "Data & Replication — Sam Absher"
+---
+
+Datasets I have constructed for my research, and replication files for
+published and working papers. Small files are hosted here or on GitHub; larger
+archives live on a permanent repository with a DOI.
+
+<!-- TODO: For each entry below, decide the hosting (GitHub repo vs. Zenodo/OSF
+     archive), upload the files, and replace the placeholder links. Delete any
+     card you don't want public yet. -->
+
+```{=html}
+<div class="section-label">Replication packages</div>
+
+<div class="paper-card">
+  <h3>Fences and Fortunes — El Paso border enforcement</h3>
+  <div class="meta">County panel + IPUMS extraction code · Stata</div>
+  <p class="abstract">
+    Annual county-level panel (per-capita income, population, business
+    establishments, UCR crime) for El Paso and donor counties, 1977–2002, with
+    the Stata code that produces every table and figure in the paper. The IPUMS
+    Census microdata cannot be redistributed; we provide the extract definition
+    and processing code instead.
+  </p>
+  <div class="paper-links">
+    <a href="#">GitHub — coming soon</a>
+  </div>
+</div>
+
+<div class="paper-card">
+  <h3>Libyan Revolution — conflict events and mobile coverage</h3>
+  <div class="meta">Geocoded events + network blackout dates · Stata/R</div>
+  <p class="abstract">
+    Geocoded collective-violence events from the 2011 Libyan Revolution matched
+    to mobile-network coverage, including the regime blackout windows used for
+    identification.
+  </p>
+  <div class="paper-links">
+    <a href="#">Coming soon</a>
+  </div>
+</div>
+
+<div class="section-label">Constructed datasets</div>
+
+<div class="paper-card">
+  <h3>Los Angeles school quality panel</h3>
+  <div class="meta">Scraped GreatSchools ratings · R</div>
+  <p class="abstract">
+    School-level quality ratings for Los Angeles Unified, scraped and cleaned
+    for the school-quality capitalization project, joinable to parcels and
+    attendance boundaries.
+  </p>
+  <div class="paper-links">
+    <a href="#">Coming soon</a>
+  </div>
+</div>
+```
+
+```{=html}
+<div class="section-label">Terms</div>
+```
+
+Unless noted otherwise, data and code here are released under the MIT license.
+If you use them, please cite the associated paper. Corrections and questions
+are welcome — [email me](mailto:sam.r.absher@gmail.com).

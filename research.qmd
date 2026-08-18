@@ -1,0 +1,151 @@
+---
+title: "Research"
+pagetitle: "Research — Sam Absher"
+---
+
+My work applies modern causal-inference methods — synthetic control, regression
+discontinuity, difference-in-differences — to questions in political economy,
+development, and public policy.
+
+```{=html}
+<div class="section-label">Working papers</div>
+
+<div class="paper-card" style="border-left:4px solid var(--clay);">
+  <h3><a href="research/fences-and-fortunes/">Fences and Fortunes: The Effect of Enhanced Border Enforcement on El Paso</a></h3>
+  <div class="meta">with Robin Grier and Kevin Grier · Under review</div>
+  <p class="abstract">
+    Using household-level difference-in-differences and county-level synthetic
+    control, we estimate the effects of 1993's Operation Hold the Line on El
+    Paso. Incomes, house values, population, and business establishments all
+    fell relative to their counterfactuals; property and violent crime declined.
+    A cost-benefit analysis finds the costs substantially outweighed the
+    benefits.
+  </p>
+  <div class="paper-links">
+    <a class="primary" href="research/fences-and-fortunes/">Data companion</a>
+    <a href="#">Paper (PDF) — TODO</a>
+    <a href="#">Replication — TODO</a>
+  </div>
+</div>
+
+<div class="paper-card">
+  <h3>Mobile Phones and Collective Violent Action: Evidence from the Libyan Revolution</h3>
+  <div class="meta">with Kevin Grier · Working paper</div>
+  <p class="abstract">
+    Did mobile-phone coverage shape where collective violence broke out during
+    the 2011 Libyan Revolution? We exploit the regime's own network blackouts to
+    find out.
+  </p>
+  <div class="paper-links">
+    <a href="#">Paper (PDF) — TODO</a>
+  </div>
+</div>
+
+<div class="paper-card">
+  <h3>The Persistent Effects of Military Violence Against Civilians</h3>
+  <div class="meta">Working paper</div>
+  <p class="abstract">
+    A geographic regression discontinuity analysis of the Soviet occupation in
+    East Germany and its long-run consequences for the communities that
+    experienced it.
+  </p>
+  <div class="paper-links">
+    <a href="#">Paper (PDF) — TODO</a>
+  </div>
+</div>
+
+<div class="paper-card">
+  <h3>Willingness to Pay for School Quality: An Application of Spatial First Differences</h3>
+  <div class="meta">with Jason Ward and Susha Roy · In progress</div>
+  <p class="abstract">
+    How much do home buyers pay for better schools? We estimate capitalization
+    of school quality into Los Angeles house prices using spatial first
+    differences.
+  </p>
+</div>
+
+<div class="section-label">Journal articles</div>
+
+<div class="paper-card">
+  <h3>The Consequences of CIA-Sponsored Regime Change in Latin America</h3>
+  <div class="meta">with Kevin Grier and Robin Grier · European Journal of Political Economy 80 (2023)</div>
+  <div class="paper-links">
+    <a href="#">Journal — TODO</a>
+    <a href="#">Ungated PDF — TODO</a>
+  </div>
+</div>
+
+<div class="paper-card">
+  <h3>The Economic Consequences of Durable Left-Populist Regimes in Latin America</h3>
+  <div class="meta">with Kevin Grier and Robin Grier · Journal of Economic Behavior &amp; Organization 177 (2020)</div>
+  <div class="paper-links">
+    <a href="#">Journal — TODO</a>
+    <a href="#">Ungated PDF — TODO</a>
+  </div>
+</div>
+
+<div class="paper-card">
+  <h3>You Say You Want a (Rose) Revolution? The Effects of Georgia's 2004 Market Reforms</h3>
+  <div class="meta">with Kevin Grier and Bob Lawson · Economics of Transition and Institutional Change 27 (2018)</div>
+  <div class="paper-links">
+    <a href="#">Journal — TODO</a>
+    <a href="#">Ungated PDF — TODO</a>
+  </div>
+</div>
+
+<div class="section-label">Policy reports (RAND)</div>
+
+<div class="paper-card">
+  <h3>A Review of the Military Basic Pay Table</h3>
+  <div class="meta">Asch, Mattock, Ward, Absher, Tong &amp; Shenk · 2025 · RR-A2400-1</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/research_reports/RRA2400-1.html">RAND</a></div>
+</div>
+
+<div class="paper-card">
+  <h3>Reassessing the Basic Allowance for Housing for Army Personnel in a Rapidly Changing Housing Market</h3>
+  <div class="meta">Asch, Ward &amp; Absher · 2025 · RR-A2412-1</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/research_reports/RRA2412-1.html">RAND</a></div>
+</div>
+
+<div class="paper-card">
+  <h3>Recruiter Management in the Department of the Air Force</h3>
+  <div class="meta">Calkins, Absher, Emslie, Gadwah-Meaden, Gromis, Light, et al. · 2024 · RR-A2181-1</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/research_reports/RRA2181-1.html">RAND</a></div>
+</div>
+
+<div class="paper-card">
+  <h3>The Impact of State Voting Processes in the 2020 Election</h3>
+  <div class="meta">Absher &amp; Kavanagh · 2023 · RR-A112-25</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/research_reports/RRA112-25.html">RAND</a></div>
+</div>
+
+<div class="paper-card">
+  <h3>A Revised Recruiting Resource Model for Achieving the Army Personnel Strategy</h3>
+  <div class="meta">Ward, Wenger, Cabreros, Schwam, Bond &amp; Absher · 2023 · RR-A2108-1</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/research_reports/RRA2108-1.html">RAND</a></div>
+</div>
+
+<div class="paper-card">
+  <h3>Assessing the Value of Overseas Military Campaigning in Strategic Competition</h3>
+  <div class="meta">Watts, O'Mahoney, Rooney, Habib, Mills, Absher &amp; Kumagai · 2023 · RR-A1798-1</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/research_reports/RRA1798-1.html">RAND</a></div>
+</div>
+
+<div class="paper-card">
+  <h3>The Role of Standards in Fostering Capability Evolution</h3>
+  <div class="meta">Schmid, Triezenberg, Dimarogonas &amp; Absher · 2022 · RR-A1576-1</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/research_reports/RRA1576-1.html">RAND</a></div>
+</div>
+
+<div class="paper-card">
+  <h3>Building Military Coalitions: Lessons from U.S. Experience</h3>
+  <div class="meta">Kavanagh, Absher, Chandler, Tabatabai, Martini, Bae, Bryne &amp; Shurkin · 2021 · RR-A859-1</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/research_reports/RRA859-1.html">RAND</a></div>
+</div>
+
+<div class="paper-card">
+  <h3>America's 5G Era: Gaining Competitive Advantages While Securing the Country and Its People</h3>
+  <div class="meta">Bonds, Bonomo, Gonzales, Neu, Absher, et al. · 2021 · PE-A435-1</div>
+  <div class="paper-links"><a href="https://www.rand.org/pubs/perspectives/PEA435-1.html">RAND</a></div>
+</div>
+```

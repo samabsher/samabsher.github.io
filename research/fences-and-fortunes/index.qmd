@@ -1,0 +1,436 @@
+---
+pagetitle: "Fences and Fortunes — a data companion"
+format:
+  html:
+    css: ../../styles/paper.css
+---
+
+```{=html}
+<div class="paper-page">
+
+<!-- ============================== HERO ============================== -->
+<div class="pp-hero">
+  <div class="kicker" style="color:var(--ink-mute);">A data companion to the working paper</div>
+  <div class="pp-overline">The Effect of Enhanced Border Enforcement on El Paso</div>
+  <h1>Fences and Fortunes</h1>
+  <div class="pp-sub">In 1993, El Paso got the border crackdown it asked for. We measure what it cost.</div>
+  <div class="pp-byline">Robin Grier · Sam Absher · Kevin Grier</div>
+
+  <div class="pp-stats">
+    <div class="pp-stat">
+      <div class="v">−$2,714</div>
+      <div class="k">average household income, El Paso 2000, relative to control cities (−6%)</div>
+    </div>
+    <div class="pp-stat">
+      <div class="v">−$23,194</div>
+      <div class="k">average house value — roughly 23% below what it would have been</div>
+    </div>
+    <div class="pp-stat">
+      <div class="v">≈ −$5.9B</div>
+      <div class="k">cumulative net effect, 1994–2002, after crediting every crime reduction (2000 USD)</div>
+    </div>
+  </div>
+
+  <div class="pp-actions">
+    <!-- TODO: replace # with SSRN / working paper URL and replication repo -->
+    <a class="solid" href="#">Read the paper</a>
+    <a class="ghost" href="#">Data &amp; code</a>
+  </div>
+</div>
+
+<!-- ============================== 01 ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">01 · The Operation</div>
+  <h2>A wall of agents</h2>
+  <p>
+    Before 1993, the Border Patrol mostly looked for unauthorized immigrants
+    <em>after</em> they were already inside El Paso — a practice that amounted to
+    stopping and searching people based on how they looked, and that ended in a
+    federal class-action lawsuit. When the court granted relief, a new sector
+    chief flipped the strategy: stop crossings from happening at all.
+  </p>
+  <p>
+    On September 19, 1993, Operation Hold the Line put a visible line of agents
+    along the border — over 400 of the sector's 650 agents, positioned within
+    sight of each other, around the clock, backed by four helicopter patrols and
+    a repaired nine-mile downtown fence. It worked on its own terms:
+    apprehensions around El Paso fell 80–85% within weeks. Local approval
+    topped 90%, and the operation became the template for border militarization
+    in California and beyond.
+  </p>
+
+  <div class="pp-quotepair">
+    <div class="pp-quote">
+      “The rampant criminal problems in our downtown are gone.”
+      <span class="attr">— Larry Francis, Mayor of El Paso, 1993</span>
+    </div>
+    <div class="pp-bigfact">
+      <div class="v">~40%</div>
+      <div class="k">estimated share of El Paso retail purchases made by Mexican
+      consumers before the operation. The governor of Chihuahua answered the
+      crackdown with a “Buy Mexican” campaign.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== 02 ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">02 · Two Cities, One Economy</div>
+  <h2>The line ran through a single city</h2>
+  <p>
+    El Paso and Ciudad Juárez are not neighbors so much as halves. In the early
+    1990s roughly 20% of all U.S.–Mexico overland trade moved through the area
+    and over 150,000 people crossed the border every day — to work, shop, attend
+    school, see a doctor. Juárez residents supplied labor to El Paso firms and
+    an estimated 20–30% of the city's retail sales. Nearly two-thirds of El
+    Pasoans spoke Spanish at home.
+  </p>
+  <p>
+    Cutting crossings in a place like that is not a surgical strike on illegal
+    entry. It reduces the supply of workers, the demand for goods, and the
+    customer base of downtown businesses — all at once. Whether the net effect
+    on El Paso was positive or negative is an empirical question. So we
+    measured it.
+  </p>
+</div>
+
+<!-- ============================== 03 ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">03 · The Measuring Stick</div>
+  <h2>Compared to what?</h2>
+  <p>
+    You can't rerun the 1990s without the operation, so we build the
+    counterfactual two independent ways.
+  </p>
+  <p>
+    <strong>Households.</strong> Using the 5% Census samples from IPUMS —
+    70,272 household records — we compare El Paso before (1990) and after
+    (2000) the operation against three southwestern control cities: Tucson,
+    Albuquerque, and Laredo, in a difference-in-differences design reweighted
+    on age, sex, marital status, education, children, and Hispanic origin.
+  </p>
+  <p>
+    <strong>The county.</strong> With annual county data we build a “synthetic
+    El Paso” — a weighted blend of Pima (Tucson), Bernalillo (Albuquerque), and
+    Webb (Laredo) counties, with weights chosen so the blend tracks real El
+    Paso for the fifteen-plus years <em>before</em> 1993. If the blend matches
+    El Paso's path up to the operation, its path afterward is a credible
+    estimate of the El Paso that never got one. Annual data lets us verify the
+    pre-treatment fit directly — and it is excellent.
+  </p>
+  <details class="pp-details">
+    <summary>What exactly is in synthetic El Paso?</summary>
+    <div class="body">
+      <p>Each outcome gets its own recipe, matched on its own pre-1993 history:</p>
+      <div class="pp-tablewrap">
+      <table class="pp-table">
+        <caption>Donor weights by outcome</caption>
+        <tr><th>Outcome</th><th>Bernalillo, NM</th><th>Pima, AZ</th><th>Webb, TX</th></tr>
+        <tr><td>Per-capita income</td><td>0.00</td><td>0.45</td><td>0.56</td></tr>
+        <tr><td>Population</td><td>0.43</td><td>0.57</td><td>0.00</td></tr>
+        <tr><td>Business establishments</td><td>0.77</td><td>0.00</td><td>0.23</td></tr>
+        <tr><td>Property crime</td><td>0.06</td><td>0.75</td><td>0.19</td></tr>
+        <tr><td>Violent crime</td><td>0.25</td><td>0.19</td><td>0.57</td></tr>
+      </table>
+      </div>
+      <p style="font-size:0.88rem; color:var(--ink-mute);">
+        Results are robust to expanding the donor pool to 15 border-region
+        counties; see the paper's appendix.
+      </p>
+    </div>
+  </details>
+</div>
+
+<!-- ============================== 04 ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">04 · Incomes and Homes</div>
+  <h2>What households lost</h2>
+  <p>
+    By 2000, the average El Paso household earned <strong>$2,714 less</strong>
+    than the control cities say it should have — a 6% drop, significant at the
+    0.1% level. House values fell further: <strong>$23,194 below</strong> a
+    counterfactual average of roughly $100,000. Since a house price capitalizes
+    everything a location offers — jobs, amenities, safety — that 23% decline
+    is a rough hedonic estimate of the operation's <em>net</em> effect on
+    living in El Paso. Buyers who could price in the safer downtown priced in
+    everything else too, and marked the city down.
+  </p>
+  <details class="pp-details">
+    <summary>How do we know it isn't noise? The placebo test</summary>
+    <div class="body">
+      <p>
+        Assign the “treatment” falsely to each control city and rerun the
+        model. Nothing comes close to El Paso's decline:
+      </p>
+      <div class="pp-tablewrap">
+      <table class="pp-table">
+        <caption>In-space placebo “effects” (weighted DiD)</caption>
+        <tr><th>Falsely treated</th><th>Income</th><th>House value</th></tr>
+        <tr><td>El Paso (actual)</td><td class="neg">−2,714***</td><td class="neg">−23,194***</td></tr>
+        <tr><td>Albuquerque</td><td>+480</td><td>+4,084**</td></tr>
+        <tr><td>Tucson</td><td>+559</td><td>+2,395</td></tr>
+        <tr><td>Laredo</td><td>+1,002</td><td>−5,776**</td></tr>
+      </table>
+      </div>
+      <p style="font-size:0.88rem; color:var(--ink-mute);">
+        Placebo income “effects” are small, positive, and insignificant. The
+        only sizeable placebo on house values is a quarter the size of El
+        Paso's, with mixed sign.
+      </p>
+    </div>
+  </details>
+</div>
+
+<!-- ============================== 05 ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">05 · The County Ledger</div>
+  <h2>Nine years of gaps</h2>
+  <p>
+    The synthetic control tells the same story year by year. Every panel below
+    plots El Paso minus its synthetic counterpart — a bar at zero means the
+    operation changed nothing that year. Solid bars beat every placebo we can
+    construct (p&nbsp;=&nbsp;0.00); faded bars don't. Income and population
+    diverge and keep diverging; the number of businesses stalls; and property
+    crime falls — the one promise the operation kept.
+  </p>
+
+  <div class="pp-chartgrid">
+
+    <div class="pp-panel">
+      <div class="t">Per-capita income</div>
+      <div class="u">Gap vs. synthetic El Paso, USD</div>
+      <svg viewBox="0 0 320 190" role="img" aria-label="Per-capita income gap by year, 1994 to 2002, all negative, reaching minus 2,526 dollars in 2001">
+        <text x="34" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">1994</text>
+        <text x="162" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">1998</text>
+        <text x="290" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">2002</text>
+        <line x1="18" y1="30" x2="302" y2="30" stroke="#C9C2B4" stroke-width="1"/>
+        <text x="10" y="33" font-size="9" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">0</text>
+        <rect x="24" y="30" width="20" height="37" rx="2" fill="#A63A2B"><title>1994 · −$777 · p = 0.00</title></rect>
+        <rect x="56" y="30" width="20" height="26" rx="2" fill="#A63A2B" fill-opacity="0.35"><title>1995 · −$557 · p = 1.00</title></rect>
+        <rect x="88" y="30" width="20" height="36" rx="2" fill="#A63A2B" fill-opacity="0.35"><title>1996 · −$767 · p = 1.00</title></rect>
+        <rect x="120" y="30" width="20" height="30" rx="2" fill="#A63A2B" fill-opacity="0.35"><title>1997 · −$627 · p = 1.00</title></rect>
+        <rect x="152" y="30" width="20" height="31" rx="2" fill="#A63A2B"><title>1998 · −$643 · p = 0.00</title></rect>
+        <rect x="184" y="30" width="20" height="36" rx="2" fill="#A63A2B"><title>1999 · −$757 · p = 0.00</title></rect>
+        <rect x="216" y="30" width="20" height="35" rx="2" fill="#A63A2B"><title>2000 · −$727 · p = 0.00</title></rect>
+        <rect x="248" y="30" width="20" height="120" rx="2" fill="#A63A2B"><title>2001 · −$2,526 · p = 0.00</title></rect>
+        <rect x="280" y="30" width="20" height="97" rx="2" fill="#A63A2B"><title>2002 · −$2,039 · p = 0.00</title></rect>
+        <text x="34" y="79" font-size="10" fill="#1C1917" text-anchor="middle" font-family="Inter,sans-serif">−$777</text>
+        <text x="258" y="162" font-size="10" fill="#1C1917" text-anchor="middle" font-family="Inter,sans-serif">−$2,526</text>
+      </svg>
+    </div>
+
+    <div class="pp-panel">
+      <div class="t">Population</div>
+      <div class="u">Gap vs. synthetic El Paso, persons</div>
+      <svg viewBox="0 0 320 190" role="img" aria-label="Population gap by year, growing from minus 6,151 in 1994 to minus 50,093 in 2002">
+        <text x="34" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">1994</text>
+        <text x="162" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">1998</text>
+        <text x="290" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">2002</text>
+        <line x1="18" y1="30" x2="302" y2="30" stroke="#C9C2B4" stroke-width="1"/>
+        <text x="10" y="33" font-size="9" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">0</text>
+        <rect x="24" y="30" width="20" height="15" rx="2" fill="#A63A2B" fill-opacity="0.35"><title>1994 · −6,151 · p = 1.00</title></rect>
+        <rect x="56" y="30" width="20" height="37" rx="2" fill="#A63A2B"><title>1995 · −15,465 · p = 0.00</title></rect>
+        <rect x="88" y="30" width="20" height="59" rx="2" fill="#A63A2B"><title>1996 · −24,464 · p = 0.00</title></rect>
+        <rect x="120" y="30" width="20" height="62" rx="2" fill="#A63A2B"><title>1997 · −25,980 · p = 0.00</title></rect>
+        <rect x="152" y="30" width="20" height="71" rx="2" fill="#A63A2B"><title>1998 · −29,700 · p = 0.00</title></rect>
+        <rect x="184" y="30" width="20" height="84" rx="2" fill="#A63A2B"><title>1999 · −35,146 · p = 0.00</title></rect>
+        <rect x="216" y="30" width="20" height="100" rx="2" fill="#A63A2B"><title>2000 · −41,701 · p = 0.00</title></rect>
+        <rect x="248" y="30" width="20" height="104" rx="2" fill="#A63A2B"><title>2001 · −43,545 · p = 0.00</title></rect>
+        <rect x="280" y="30" width="20" height="120" rx="2" fill="#A63A2B"><title>2002 · −50,093 · p = 0.00</title></rect>
+        <text x="34" y="57" font-size="10" fill="#1C1917" text-anchor="middle" font-family="Inter,sans-serif">−6,151</text>
+        <text x="290" y="162" font-size="10" fill="#1C1917" text-anchor="middle" font-family="Inter,sans-serif">−50,093</text>
+      </svg>
+    </div>
+
+    <div class="pp-panel">
+      <div class="t">Business establishments</div>
+      <div class="u">Gap vs. synthetic El Paso, count</div>
+      <svg viewBox="0 0 320 190" role="img" aria-label="Business establishment gap by year, between minus 219 and minus 609, all significant">
+        <text x="34" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">1994</text>
+        <text x="162" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">1998</text>
+        <text x="290" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">2002</text>
+        <line x1="18" y1="30" x2="302" y2="30" stroke="#C9C2B4" stroke-width="1"/>
+        <text x="10" y="33" font-size="9" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">0</text>
+        <rect x="24" y="30" width="20" height="43" rx="2" fill="#A63A2B"><title>1994 · −219 · p = 0.00</title></rect>
+        <rect x="56" y="30" width="20" height="84" rx="2" fill="#A63A2B"><title>1995 · −424 · p = 0.00</title></rect>
+        <rect x="88" y="30" width="20" height="90" rx="2" fill="#A63A2B"><title>1996 · −457 · p = 0.00</title></rect>
+        <rect x="120" y="30" width="20" height="120" rx="2" fill="#A63A2B"><title>1997 · −609 · p = 0.00</title></rect>
+        <rect x="152" y="30" width="20" height="87" rx="2" fill="#A63A2B"><title>1998 · −442 · p = 0.00</title></rect>
+        <rect x="184" y="30" width="20" height="94" rx="2" fill="#A63A2B"><title>1999 · −478 · p = 0.00</title></rect>
+        <rect x="216" y="30" width="20" height="116" rx="2" fill="#A63A2B"><title>2000 · −587 · p = 0.00</title></rect>
+        <rect x="248" y="30" width="20" height="113" rx="2" fill="#A63A2B"><title>2001 · −573 · p = 0.00</title></rect>
+        <rect x="280" y="30" width="20" height="107" rx="2" fill="#A63A2B"><title>2002 · −543 · p = 0.00</title></rect>
+        <text x="34" y="85" font-size="10" fill="#1C1917" text-anchor="middle" font-family="Inter,sans-serif">−219</text>
+        <text x="290" y="149" font-size="10" fill="#1C1917" text-anchor="middle" font-family="Inter,sans-serif">−543</text>
+      </svg>
+    </div>
+
+    <div class="pp-panel">
+      <div class="t">Property crime arrests</div>
+      <div class="u">Gap vs. synthetic El Paso, count — a decline is the intended effect</div>
+      <svg viewBox="0 0 320 190" role="img" aria-label="Property crime arrest gap by year, declines of roughly 1,300 to 2,700 arrests">
+        <text x="34" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">1994</text>
+        <text x="162" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">1998</text>
+        <text x="290" y="18" font-size="10" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">2002</text>
+        <line x1="18" y1="30" x2="302" y2="30" stroke="#C9C2B4" stroke-width="1"/>
+        <text x="10" y="33" font-size="9" fill="#8A857D" text-anchor="middle" font-family="Inter,sans-serif">0</text>
+        <rect x="24" y="30" width="20" height="61" rx="2" fill="#0F5A66"><title>1994 · −1,361 · p = 0.00</title></rect>
+        <rect x="56" y="30" width="20" height="120" rx="2" fill="#0F5A66"><title>1995 · −2,655 · p = 0.00</title></rect>
+        <rect x="88" y="30" width="20" height="111" rx="2" fill="#0F5A66"><title>1996 · −2,457 · p = 0.00</title></rect>
+        <rect x="120" y="30" width="20" height="80" rx="2" fill="#0F5A66"><title>1997 · −1,771 · p = 0.00</title></rect>
+        <rect x="152" y="30" width="20" height="74" rx="2" fill="#0F5A66"><title>1998 · −1,649 · p = 0.00</title></rect>
+        <rect x="184" y="30" width="20" height="61" rx="2" fill="#0F5A66"><title>1999 · −1,350 · p = 0.00</title></rect>
+        <rect x="216" y="30" width="20" height="62" rx="2" fill="#0F5A66" fill-opacity="0.35"><title>2000 · −1,377 · p = 0.67</title></rect>
+        <rect x="248" y="30" width="20" height="100" rx="2" fill="#0F5A66"><title>2001 · −2,222 · p = 0.00</title></rect>
+        <rect x="280" y="30" width="20" height="111" rx="2" fill="#0F5A66"><title>2002 · −2,460 · p = 0.00</title></rect>
+        <text x="34" y="103" font-size="10" fill="#1C1917" text-anchor="middle" font-family="Inter,sans-serif">−1,361</text>
+        <text x="290" y="153" font-size="10" fill="#1C1917" text-anchor="middle" font-family="Inter,sans-serif">−2,460</text>
+      </svg>
+    </div>
+
+  </div>
+  <p class="pp-note">
+    Effects and standardized p-values from the paper's Table 3. With three
+    donor counties, permutation p-values can only take four values (0.00, 0.33,
+    0.67, 1.00); a p of 0.00 means El Paso's gap is larger than every placebo
+    gap. Violent crime (not shown) also declined, though less sharply.
+    Each panel is scaled to its own range — hover any bar for the exact value.
+  </p>
+</div>
+
+<!-- ============================== 06 ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">06 · The Bargain, Priced</div>
+  <h2>Crime fell. It wasn't close to enough.</h2>
+  <p>
+    Crime reduction was the operation's selling point, so credit it in full:
+    monetize every avoided property and violent crime using standard
+    cost-of-crime values — generous ones. Then set those benefits against the
+    income losses. The ledger is not close in any year:
+  </p>
+  <div class="pp-tablewrap">
+  <table class="pp-table">
+    <caption>Monetized net effect of Operation Hold the Line (millions of 2000 USD)</caption>
+    <tr><th>Year</th><th>Income loss</th><th>Crime benefit</th><th>Net</th></tr>
+    <tr><td>1994</td><td class="neg">−583.1</td><td class="pos">+5.8</td><td class="neg">−577.2</td></tr>
+    <tr><td>1995</td><td class="neg">−411.9</td><td class="pos">+156.6</td><td class="neg">−255.2</td></tr>
+    <tr><td>1996</td><td class="neg">−552.6</td><td class="pos">+65.5</td><td class="neg">−487.0</td></tr>
+    <tr><td>1997</td><td class="neg">−447.4</td><td class="pos">+48.2</td><td class="neg">−399.1</td></tr>
+    <tr><td>1998</td><td class="neg">−456.1</td><td class="pos">+50.9</td><td class="neg">−405.1</td></tr>
+    <tr><td>1999</td><td class="neg">−528.2</td><td class="pos">+43.7</td><td class="neg">−484.4</td></tr>
+    <tr><td>2000</td><td class="neg">−495.5</td><td class="pos">+82.9</td><td class="neg">−412.6</td></tr>
+    <tr><td>2001</td><td class="neg">−1,692.7</td><td class="pos">+81.4</td><td class="neg">−1,611.3</td></tr>
+    <tr><td>2002</td><td class="neg">−1,359.3</td><td class="pos">+72.2</td><td class="neg">−1,287.1</td></tr>
+  </table>
+  </div>
+  <p class="pp-note">
+    Crime benefit combines the property- and violent-crime columns of the
+    paper's Table 5. Summing the net column: roughly −$5.9 billion over nine
+    years, borne by a county of about 700,000 people. These figures count only
+    income and crime — they exclude the operation's direct budget cost, which
+    would push the net further down.
+  </p>
+  <p>
+    The debate over border enforcement is usually a national one — about
+    deportations, crime rates, and labor markets in the aggregate. What this
+    ledger shows is a cost that debate mostly ignores: the bill handed to the
+    border communities themselves.
+  </p>
+</div>
+
+<!-- ============================== 07 ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">07 · Kick the Tires</div>
+  <h2>For researchers (and skeptics)</h2>
+  <p>
+    The full batteries are in the paper; the short versions are here.
+  </p>
+  <details class="pp-details">
+    <summary>Two designs, two datasets, one answer</summary>
+    <div class="body">
+      The household evidence (Census microdata, difference-in-differences) and
+      the county evidence (annual aggregates, synthetic control) share no data
+      and few assumptions. The DiD cannot show pre-trends; the synthetic
+      control can, and its pre-1993 fit is excellent. Both find economically
+      large, statistically significant losses.
+    </div>
+  </details>
+  <details class="pp-details">
+    <summary>Maybe El Paso was just different? The placebo tests</summary>
+    <div class="body">
+      Falsely treating Tucson, Albuquerque, or Laredo produces income
+      “effects” of +$480 to +$1,002 — none significant, all the wrong sign for
+      the skeptic's story. In the county analysis, El Paso's gaps exceed every
+      constructible placebo in nearly all years.
+    </div>
+  </details>
+  <details class="pp-details">
+    <summary>Sensitive to the three-county donor pool?</summary>
+    <div class="body">
+      No. Expanding the pool to 15 counties leaves the pre-treatment fit
+      excellent and the post-1993 income decline negative and significant,
+      beginning right at the intervention.
+    </div>
+  </details>
+  <details class="pp-details">
+    <summary>Isn't the house-value decline double counting?</summary>
+    <div class="body">
+      We treat it as an alternative summary, not an addition. Because house
+      prices capitalize local wages, amenities, and safety together, the ~23%
+      relative decline is best read as a hedonic estimate of the operation's
+      overall net effect — an independent check that lands in the same place
+      as the income-based ledger.
+    </div>
+  </details>
+</div>
+
+<!-- ============================== 08 ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">08 · Materials</div>
+  <h2>Paper, data, and code</h2>
+  <p>
+    Every number on this page comes from the working paper and its replication
+    files. Household data are the public IPUMS 5% Census samples (1990, 2000);
+    county data are from the Bureau of Economic Analysis, the Census Bureau's
+    Business Dynamics Statistics, and the FBI's Uniform Crime Reports.
+  </p>
+  <div class="pp-actions" style="justify-content:flex-start;">
+    <!-- TODO: replace # with SSRN / working paper URL and replication repo -->
+    <a class="solid" href="#">Working paper (PDF)</a>
+    <a class="ghost" href="#">Replication files</a>
+  </div>
+</div>
+
+<!-- ============================== AUTHORS ============================== -->
+<div class="pp-section">
+  <div class="pp-secnum">The Authors</div>
+  <div class="pp-authors">
+    <div class="pp-author">
+      <div class="n">Robin Grier</div>
+      <div class="a">Professor, Agricultural &amp; Applied Economics, Texas Tech University</div>
+      <div class="l"><a href="https://robinmgrier.com">robinmgrier.com</a></div>
+    </div>
+    <div class="pp-author">
+      <div class="n">Sam Absher</div>
+      <div class="a">Senior Consultant, Research &amp; Planning Consultants, LP</div>
+      <div class="l"><a href="../../index.html">samabsher.com</a></div>
+    </div>
+    <div class="pp-author">
+      <div class="n">Kevin Grier</div>
+      <div class="a">Professor, Political Science, Texas Tech University</div>
+      <div class="l"><a href="https://kevinbgrier.com">kevinbgrier.com</a></div>
+    </div>
+  </div>
+  <div class="pp-citation">
+    Grier, Robin, Sam Absher, and Kevin Grier. “Fences and Fortunes: The
+    Effect of Enhanced Border Enforcement on El Paso.” Working paper, under
+    review.<br>
+    Household data: IPUMS USA, 5% samples, 1990 &amp; 2000. County data: BEA
+    regional accounts, Census Business Dynamics Statistics, FBI Uniform Crime
+    Reports. Estimation: weighted difference-in-differences; synthetic control
+    with randomization inference.
+  </div>
+</div>
+
+</div>
+```
