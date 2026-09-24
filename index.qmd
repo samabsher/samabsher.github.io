@@ -71,6 +71,7 @@ pagetitle: "Sam Absher — Economist"
     <div class="meta">with Kevin Grier and Robin Grier · Journal of Economic Behavior &amp; Organization, 2020</div>
     <div class="paper-links">
       <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167268120302237">Journal</a>
+      <a href="files/papers/left-populism-accepted.pdf">PDF (ungated)</a>
     </div>
   </div>
 
