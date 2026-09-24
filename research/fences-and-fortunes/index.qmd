@@ -32,9 +32,9 @@ format:
   </div>
 
   <div class="pp-actions">
-    <!-- TODO: replace # with SSRN / working paper URL and replication repo -->
-    <a class="solid" href="#">Read the paper</a>
-    <a class="ghost" href="#">Data &amp; code</a>
+    <!-- TODO: swap for SSRN / working paper URL and replication repo when posted -->
+    <a class="solid" href="mailto:sam.r.absher@gmail.com?subject=Fences%20and%20Fortunes%20draft">Request the draft</a>
+    <a class="ghost" href="../../data.html">Data &amp; code</a>
   </div>
 </div>
 
@@ -395,9 +395,9 @@ format:
     Business Dynamics Statistics, and the FBI's Uniform Crime Reports.
   </p>
   <div class="pp-actions" style="justify-content:flex-start;">
-    <!-- TODO: replace # with SSRN / working paper URL and replication repo -->
-    <a class="solid" href="#">Working paper (PDF)</a>
-    <a class="ghost" href="#">Replication files</a>
+    <!-- TODO: swap for SSRN / working paper URL and replication repo when posted -->
+    <a class="solid" href="mailto:sam.r.absher@gmail.com?subject=Fences%20and%20Fortunes%20draft">Request the draft</a>
+    <a class="ghost" href="../../data.html">Replication files</a>
   </div>
 </div>
 
