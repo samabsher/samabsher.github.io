@@ -31,9 +31,11 @@ pagetitle: "Sam Absher — Economist"
     counterfactuals and better understand their causal effects.
   </p>
   <p>
-    I'm a Senior Consultant at Research &amp; Planning Consultants. Before
-    that, I was an economist at RAND for six years. Ph.D., University of
-    Oklahoma (Boomer Sooner).
+    I'm a Senior Consultant at
+    <a href="https://www.rpcconsulting.com/">Research &amp; Planning Consultants</a>,
+    where I apply the same toolkit to economic questions in litigation. Before
+    that, I was an economist at <a href="https://www.rand.org/">RAND</a> for
+    six years. Ph.D., University of Oklahoma (Boomer Sooner).
   </p>
 </div>
 
