@@ -1,145 +1,216 @@
 /*-- scss:defaults --*/
 
-$body-bg: #FAF7F2;
-$body-color: #1C1917;
-$link-color: #A63A2B;
-$font-family-sans-serif: "Inter", system-ui, sans-serif;
-$font-family-base: "Source Serif 4", Georgia, serif;
-$headings-font-family: "Fraunces", Georgia, serif;
-$navbar-bg: #FAF7F2;
-$footer-bg: #FAF7F2;
+$body-bg: #fafaf8;
+$body-color: #2c2c2c;
+$link-color: #1a1a1a;
+$font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-base: "Source Sans 3", -apple-system, BlinkMacSystemFont, sans-serif;
+$headings-font-family: "Source Serif 4", Georgia, serif;
+$navbar-bg: #fafaf8;
+$footer-bg: #fafaf8;
 
 /*-- scss:rules --*/
 
 :root {
-  --paper: #FAF7F2;
-  --ink: #1C1917;
-  --ink-soft: #57534E;
-  --ink-mute: #8A857D;
-  --clay: #A63A2B;
-  --clay-deep: #7C2A1E;
-  --teal: #0F5A66;
-  --hairline: #E4DCCF;
-  --card: #FFFFFF;
+  --paper: #fafaf8;
+  --ink: #1a1a1a;
+  --ink-body: #2c2c2c;
+  --ink-soft: #555555;
+  --ink-mute: #999999;
+  --clay: #A63A2B;   /* data color only — charts & companion-page stats */
+  --teal: #0F5A66;   /* data color only */
+  --hairline: #e5e5e0;
+  --card: #ffffff;
 }
 
 body {
   background: var(--paper);
-  font-size: 1.06rem;
-  line-height: 1.65;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
+/* ---------- navbar: barely there ---------- */
 .navbar {
-  border-bottom: 1px solid var(--hairline);
-  font-family: "Inter", sans-serif;
-  letter-spacing: 0.01em;
+  border-bottom: none;
+  box-shadow: none;
+  padding-top: 0.9rem;
 }
 .navbar-brand {
-  font-family: "Fraunces", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
+  color: var(--ink);
 }
 .navbar .nav-link {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
+  color: var(--ink-mute);
 }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: var(--ink); }
 
-h1, h2, h3 { color: var(--ink); }
-h1 { font-weight: 560; }
+h1, h2, h3 { color: var(--ink); font-weight: 400; }
+h1 strong, h2 strong { font-weight: 600; }
 
-a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a {
+  color: var(--ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--ink-soft); }
 
 .page-footer, .nav-footer {
   border-top: 1px solid var(--hairline);
   color: var(--ink-mute);
-  font-family: "Inter", sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+}
+
+/* ---------- home hero (McCrory-style) ---------- */
+.mc-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem 4rem 1rem;
+}
+#walk-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.mc-hero-content { position: relative; z-index: 1; max-width: 620px; }
+.mc-hero .hero-name {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: clamp(2.6rem, 7vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.mc-hero .hero-name strong { font-weight: 600; }
+.mc-hero .subtitle {
+  font-size: 1.25rem;
+  color: var(--ink-soft);
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 1.6rem;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+.social-links a {
+  color: var(--ink);
+  font-size: 1.35rem;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.social-links a:hover { color: var(--ink-mute); transform: translateY(-2px); }
+.scroll-indicator {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--ink-mute);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  z-index: 1;
 }
 
 /* ---------- shared components ---------- */
-
 .kicker {
-  font-family: "Inter", sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--clay);
+  color: var(--ink-mute);
   margin-bottom: 0.6rem;
 }
-
 .lede {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 300;
   line-height: 1.55;
   color: var(--ink-soft);
   max-width: 42rem;
 }
+.section-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin: 3rem 0 0.4rem 0;
+}
+.home-section { max-width: 620px; margin: 0 auto; padding: 2.5rem 0; }
+.home-section h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* research entries: quiet list, hairline separators, no boxes */
+.paper-card {
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--hairline);
+  border-radius: 0;
+  padding: 1.35rem 0;
+  margin-bottom: 0;
+}
+.paper-card h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+.paper-card h3 a { text-decoration: none; color: var(--ink); }
+.paper-card h3 a:hover { color: var(--ink-soft); }
+.paper-card .meta {
+  font-size: 0.85rem;
+  color: var(--ink-mute);
+  margin-bottom: 0.5rem;
+}
+.paper-card p.abstract {
+  font-size: 0.97rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+.paper-links {
+  display: flex;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+}
+.paper-links a {
+  border: none;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--ink-mute);
+}
+.paper-links a:hover { color: var(--ink); }
+.paper-links a.primary { color: var(--ink); }
+.paper-links a.primary::after { content: " →"; }
 
 .hairline-rule {
   border: 0;
   border-top: 1px solid var(--hairline);
   margin: 2.5rem 0;
-}
-
-/* paper cards on research index */
-.paper-card {
-  background: var(--card);
-  border: 1px solid var(--hairline);
-  border-radius: 10px;
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1.1rem;
-}
-.paper-card h3 {
-  font-family: "Fraunces", serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0 0 0.3rem 0;
-}
-.paper-card h3 a { text-decoration: none; color: var(--ink); }
-.paper-card h3 a:hover { color: var(--clay); }
-.paper-card .meta {
-  font-family: "Inter", sans-serif;
-  font-size: 0.82rem;
-  color: var(--ink-mute);
-  margin-bottom: 0.55rem;
-}
-.paper-card p.abstract {
-  font-size: 0.98rem;
-  color: var(--ink-soft);
-  margin-bottom: 0.7rem;
-}
-.paper-links {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  font-family: "Inter", sans-serif;
-  font-size: 0.8rem;
-}
-.paper-links a {
-  border: 1px solid var(--hairline);
-  border-radius: 999px;
-  padding: 0.22rem 0.75rem;
-  text-decoration: none;
-  color: var(--ink-soft);
-  font-weight: 500;
-}
-.paper-links a:hover { border-color: var(--clay); color: var(--clay); }
-.paper-links a.primary {
-  background: var(--clay);
-  border-color: var(--clay);
-  color: #fff;
-}
-.paper-links a.primary:hover { background: var(--clay-deep); }
-
-.section-label {
-  font-family: "Inter", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-  margin: 2.6rem 0 1rem 0;
 }

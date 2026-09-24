@@ -1,4 +1,4 @@
-/* Paper companion pages — editorial layout */
+﻿/* Paper companion pages - editorial layout */
 
 .paper-page {
   max-width: 46rem;
@@ -12,16 +12,16 @@
 }
 .pp-hero .kicker { color: var(--ink-mute); }
 .pp-overline {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--clay);
+  color: var(--ink-mute);
   margin: 1.4rem 0 0.6rem 0;
 }
 .pp-hero h1 {
-  font-family: "Fraunces", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: clamp(2.4rem, 6vw, 3.6rem);
   font-weight: 620;
   line-height: 1.08;
@@ -31,11 +31,11 @@
   font-size: 1.3rem;
   color: var(--ink-soft);
   font-style: italic;
-  font-family: "Fraunces", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   margin-bottom: 0.9rem;
 }
 .pp-byline {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.88rem;
   color: var(--ink-mute);
 }
@@ -57,14 +57,14 @@
   text-align: center;
 }
 .pp-stat .v {
-  font-family: "Fraunces", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 1.9rem;
   font-weight: 600;
   color: var(--clay);
   line-height: 1.1;
 }
 .pp-stat .k {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.78rem;
   color: var(--ink-mute);
   margin-top: 0.45rem;
@@ -79,7 +79,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 0.4rem;
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
 }
 .pp-actions a {
   border-radius: 999px;
@@ -89,24 +89,24 @@
   text-decoration: none;
 }
 .pp-actions a.solid { background: var(--ink); color: var(--paper); }
-.pp-actions a.solid:hover { background: var(--clay); }
+.pp-actions a.solid:hover { background: var(--ink-soft); }
 .pp-actions a.ghost { border: 1.5px solid var(--ink); color: var(--ink); }
-.pp-actions a.ghost:hover { border-color: var(--clay); color: var(--clay); }
+.pp-actions a.ghost:hover { border-color: var(--ink-soft); color: var(--ink-soft); }
 
 /* numbered sections */
 .pp-section { margin: 3.6rem 0; }
 .pp-secnum {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: var(--clay);
+  color: var(--ink-mute);
   text-transform: uppercase;
   border-top: 1px solid var(--hairline);
   padding-top: 1.1rem;
 }
 .pp-section h2 {
-  font-family: "Fraunces", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 1.9rem;
   font-weight: 620;
   margin: 0.5rem 0 1.1rem 0;
@@ -124,16 +124,16 @@
 }
 @media (max-width: 640px) { .pp-quotepair { grid-template-columns: 1fr; } }
 .pp-quote {
-  border-left: 3px solid var(--clay);
+  border-left: 3px solid var(--ink);
   padding-left: 1.1rem;
-  font-family: "Fraunces", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 1.15rem;
   font-style: italic;
   line-height: 1.5;
 }
 .pp-quote .attr {
   display: block;
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-style: normal;
   font-size: 0.8rem;
   color: var(--ink-mute);
@@ -141,14 +141,14 @@
 }
 .pp-bigfact { text-align: center; }
 .pp-bigfact .v {
-  font-family: "Fraunces", serif;
+  font-family: "Source Serif 4", Georgia, serif;
   font-size: 3.2rem;
   font-weight: 650;
   color: var(--teal);
   line-height: 1;
 }
 .pp-bigfact .k {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.82rem;
   color: var(--ink-mute);
   max-width: 16rem;
@@ -171,20 +171,20 @@
   padding: 1rem 1rem 0.6rem 1rem;
 }
 .pp-panel .t {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--ink);
 }
 .pp-panel .u {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.74rem;
   color: var(--ink-mute);
   margin-bottom: 0.4rem;
 }
 .pp-panel svg { width: 100%; height: auto; display: block; }
 .pp-note {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.8rem;
   color: var(--ink-mute);
   line-height: 1.5;
@@ -195,7 +195,7 @@
 .pp-table { width: 100%; border-collapse: collapse; margin: 1.4rem 0; font-size: 0.95rem; }
 .pp-table caption {
   caption-side: top;
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -205,7 +205,7 @@
   padding-bottom: 0.5rem;
 }
 .pp-table th {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -237,14 +237,14 @@ details.pp-details {
 details.pp-details summary {
   cursor: pointer;
   padding: 0.9rem 1.2rem;
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--ink);
   list-style: none;
 }
-details.pp-details summary::before { content: "+  "; color: var(--clay); font-weight: 700; }
-details.pp-details[open] summary::before { content: "−  "; }
+details.pp-details summary::before { content: "+  "; color: var(--ink-mute); font-weight: 700; }
+details.pp-details[open] summary::before { content: "\2212  "; }
 details.pp-details summary::-webkit-details-marker { display: none; }
 details.pp-details .body { padding: 0 1.2rem 1.1rem 1.2rem; font-size: 0.95rem; }
 
@@ -262,12 +262,12 @@ details.pp-details .body { padding: 0 1.2rem 1.1rem 1.2rem; font-size: 0.95rem; 
   border-radius: 10px;
   padding: 1.1rem 1.2rem;
 }
-.pp-author .n { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.05rem; }
-.pp-author .a { font-family: "Inter", sans-serif; font-size: 0.8rem; color: var(--ink-mute); margin: 0.25rem 0 0.5rem 0; line-height: 1.45; }
-.pp-author .l { font-family: "Inter", sans-serif; font-size: 0.8rem; }
+.pp-author .n { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.05rem; }
+.pp-author .a { font-family: "Source Sans 3", sans-serif; font-size: 0.8rem; color: var(--ink-mute); margin: 0.25rem 0 0.5rem 0; line-height: 1.45; }
+.pp-author .l { font-family: "Source Sans 3", sans-serif; font-size: 0.8rem; }
 
 .pp-citation {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   font-size: 0.82rem;
   color: var(--ink-mute);
   border-top: 1px solid var(--hairline);
@@ -275,3 +275,4 @@ details.pp-details .body { padding: 0 1.2rem 1.1rem 1.2rem; font-size: 0.95rem; 
   margin-top: 2.5rem;
   line-height: 1.6;
 }
+

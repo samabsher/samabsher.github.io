@@ -2,57 +2,133 @@
 pagetitle: "Sam Absher — Economist"
 ---
 
-::: {.column-page}
-
 ```{=html}
-<div style="max-width:46rem; margin-top:1.5rem;">
-  <div class="kicker">Economist · Applied Microeconomics</div>
-  <h1 style="font-size:2.7rem; margin-bottom:1rem;">Sam Absher</h1>
-  <p class="lede">
+<div class="mc-hero">
+  <canvas id="walk-canvas" aria-hidden="true"></canvas>
+  <div class="mc-hero-content">
+    <div class="hero-name" role="heading" aria-level="1">Sam <strong>Absher</strong></div>
+    <div class="subtitle">Economist — causal inference, political economy, public policy</div>
+    <div class="social-links">
+      <a href="mailto:sam.r.absher@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <!-- TODO: replace with your Google Scholar profile URL -->
+      <a href="https://scholar.google.com/citations?user=TODO" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+      <!-- TODO: replace with your GitHub profile URL -->
+      <a href="https://github.com/TODO-USERNAME" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="files/absher_cv.pdf" title="CV (PDF)" aria-label="CV as PDF"><i class="fa-solid fa-file-lines"></i></a>
+    </div>
+  </div>
+  <div class="scroll-indicator">Scroll</div>
+</div>
+
+<div class="home-section">
+  <h2>About</h2>
+  <p>
     I study what policies actually do to the people they touch — border
-    enforcement, regime change, revolutions, school quality — using the tools of
-    causal inference: synthetic control, regression discontinuity, and
+    enforcement, regime change, revolutions, school quality — using the tools
+    of causal inference: synthetic control, regression discontinuity, and
     difference-in-differences.
   </p>
-  <p style="color:var(--ink-soft); max-width:42rem;">
+  <p>
     I am a Senior Consultant at Research &amp; Planning Consultants, LP. Before
-    that I spent six years at RAND as an economist and taught microeconomics and
-    cost-benefit analysis at the RAND School of Public Policy. I hold a
-    Ph.D. in Economics from the University of Oklahoma.
+    that I spent six years as an economist at RAND, where I also taught
+    microeconomics and cost-benefit analysis at the RAND School of Public
+    Policy. I hold a Ph.D. in Economics from the University of Oklahoma.
   </p>
-  <div class="paper-links" style="margin-top:1.2rem;">
-    <a href="mailto:sam.r.absher@gmail.com">Email</a>
-    <a href="https://scholar.google.com/citations?user=TODO">Google Scholar</a>
-    <a href="https://github.com/TODO-USERNAME">GitHub</a>
-    <a href="files/absher_cv.pdf">CV (PDF)</a>
+</div>
+
+<div class="home-section">
+  <h2>Selected research</h2>
+
+  <div class="paper-card">
+    <h3><a href="research/fences-and-fortunes/">Fences and Fortunes: The Effect of Enhanced Border Enforcement on El Paso</a></h3>
+    <div class="meta">with Robin Grier and Kevin Grier · under review</div>
+    <p class="abstract">
+      In 1993, Operation Hold the Line put a wall of Border Patrol agents
+      between El Paso and Ciudad Juárez. Crossings collapsed — and so did
+      incomes, house values, and business growth on the U.S. side. The costs
+      to El Paso swamped the benefits.
+    </p>
+    <div class="paper-links">
+      <a class="primary" href="research/fences-and-fortunes/">Data companion</a>
+    </div>
+  </div>
+
+  <div class="paper-card">
+    <h3>The Consequences of CIA-Sponsored Regime Change in Latin America</h3>
+    <div class="meta">with Kevin Grier and Robin Grier · European Journal of Political Economy, 2023</div>
+    <div class="paper-links">
+      <!-- TODO: journal / ungated links -->
+      <a href="research.html">Details</a>
+    </div>
+  </div>
+
+  <div class="paper-card">
+    <h3>The Economic Consequences of Durable Left-Populist Regimes in Latin America</h3>
+    <div class="meta">with Kevin Grier and Robin Grier · Journal of Economic Behavior &amp; Organization, 2020</div>
+    <div class="paper-links">
+      <a href="research.html">Details</a>
+    </div>
+  </div>
+
+  <div class="paper-links" style="margin-top:1.4rem;">
+    <a class="primary" href="research.html">All research</a>
+    <a class="primary" href="data.html">Data &amp; replication</a>
   </div>
 </div>
+
+<script>
+(function () {
+  var canvas = document.getElementById("walk-canvas");
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext("2d");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var N = 11, dpr = window.devicePixelRatio || 1;
+  var walks = [], W = 0, H = 0, STEPS = 0;
+
+  function noise() { // approx gaussian
+    return (Math.random() + Math.random() + Math.random() - 1.5);
+  }
+  function makeWalk() {
+    var vals = [], y = (0.12 + 0.76 * Math.random()) * H;
+    for (var i = 0; i < STEPS; i++) {
+      y += noise() * H * 0.006;
+      vals.push(y);
+    }
+    return vals;
+  }
+  function resize() {
+    W = canvas.width = canvas.offsetWidth * dpr;
+    H = canvas.height = canvas.offsetHeight * dpr;
+    STEPS = Math.max(80, Math.floor(W / (6 * dpr)));
+    walks = [];
+    for (var i = 0; i < N; i++) walks.push(makeWalk());
+    draw();
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineWidth = 1 * dpr;
+    ctx.strokeStyle = "rgba(26, 26, 26, 0.07)";
+    var dx = W / (STEPS - 1);
+    for (var i = 0; i < N; i++) {
+      ctx.beginPath();
+      for (var j = 0; j < STEPS; j++) {
+        var x = j * dx, y = walks[i][j];
+        if (j === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+  }
+  function tick() {
+    for (var i = 0; i < N; i++) {
+      var vals = walks[i];
+      vals.shift();
+      vals.push(vals[vals.length - 1] + noise() * H * 0.006);
+    }
+    draw();
+  }
+  window.addEventListener("resize", resize);
+  resize();
+  if (!reduced) setInterval(tick, 90);
+})();
+</script>
 ```
-
-<div class="section-label">Featured</div>
-
-```{=html}
-<div class="paper-card" style="border-left:4px solid var(--clay);">
-  <h3><a href="research/fences-and-fortunes/">Fences and Fortunes: The Effect of Enhanced Border Enforcement on El Paso</a></h3>
-  <div class="meta">with Robin Grier and Kevin Grier · Under review</div>
-  <p class="abstract">
-    In 1993, Operation Hold the Line put a wall of Border Patrol agents between
-    El Paso and Ciudad Juárez. Crossings collapsed — and so did incomes, house
-    values, and business growth on the U.S. side. We estimate the operation's
-    causal effects and find its costs to El Paso swamped its benefits.
-  </p>
-  <div class="paper-links">
-    <a class="primary" href="research/fences-and-fortunes/">Read the data companion</a>
-    <a href="research.html">All research</a>
-  </div>
-</div>
-```
-
-<div class="section-label">Elsewhere</div>
-
-The [research page](research.qmd) lists journal articles, working papers, and
-policy reports. The [data page](data.qmd) has datasets I have constructed and
-replication files for published work. A one-page academic history is on the
-[CV page](cv.qmd).
-
-:::
