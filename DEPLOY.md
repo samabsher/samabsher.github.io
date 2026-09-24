@@ -2,13 +2,15 @@
 
 ## 1. Push to GitHub (once)
 
-1. Create an empty repository on github.com (e.g. `samabsher.com`), no README.
+1. Create an empty repository on github.com named exactly `samabsher.github.io`
+   (public, no README). Naming it `<username>.github.io` makes it a "user site,"
+   served at the root URL https://samabsher.github.io/ instead of a subpath.
 2. Then:
 
 ```
 cd D:\repos\samabsher.com
-git remote add origin https://github.com/<USERNAME>/samabsher.com.git
-git push -u origin master
+git remote add origin https://github.com/samabsher/samabsher.github.io.git
+git push -u origin main
 ```
 
 Git Credential Manager will pop up a browser window to sign in the first time.
@@ -16,8 +18,8 @@ Git Credential Manager will pop up a browser window to sign in the first time.
 ## 2. Turn on GitHub Pages
 
 On github.com: repository → Settings → Pages → "Deploy from a branch" →
-branch `master`, folder `/docs` → Save. The site appears at
-`https://<USERNAME>.github.io/samabsher.com/` within a minute or two.
+branch `main`, folder `/docs` → Save. The site appears at
+https://samabsher.github.io/ within a minute or two.
 
 ## 3. Custom domain (samabsher.com)
 
@@ -25,7 +27,7 @@ branch `master`, folder `/docs` → Save. The site appears at
 2. In the registrar's DNS settings add:
    - Four `A` records for `@` (apex): `185.199.108.153`, `185.199.109.153`,
      `185.199.110.153`, `185.199.111.153`
-   - One `CNAME` record: `www` → `<USERNAME>.github.io`
+   - One `CNAME` record: `www` → `samabsher.github.io`
 3. On github.com: Settings → Pages → Custom domain → `samabsher.com` → Save,
    and tick "Enforce HTTPS" once the certificate is issued (can take an hour).
 4. Locally, create a file named `CNAME` (no extension) in the project root

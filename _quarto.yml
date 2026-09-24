@@ -6,7 +6,8 @@ project:
 
 website:
   title: "Sam Absher"
-  site-url: https://samabsher.com
+  # switch to https://samabsher.com when the custom domain goes live (see DEPLOY.md)
+  site-url: https://samabsher.github.io
   description: "Sam Absher is an applied microeconomist. Research, data, and replication files."
   favicon: files/favicon.svg
   navbar:

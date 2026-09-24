@@ -1,1 +1,1 @@
-Sitemap: https://samabsher.com/sitemap.xml
+Sitemap: https://samabsher.github.io/sitemap.xml
