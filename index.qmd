@@ -53,7 +53,7 @@ pagetitle: "Sam Absher — Economist"
       to El Paso swamped the benefits.
     </p>
     <div class="paper-links">
-      <a class="primary" href="research/fences-and-fortunes/">Data companion</a>
+      <a class="primary accent" href="research/fences-and-fortunes/">Data companion</a>
     </div>
   </div>
 

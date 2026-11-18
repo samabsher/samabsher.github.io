@@ -208,6 +208,8 @@ a:hover { color: var(--ink-soft); }
 .paper-links a:hover { color: var(--ink); }
 .paper-links a.primary { color: var(--ink); }
 .paper-links a.primary::after { content: " →"; }
+.paper-links a.accent { color: var(--clay); }
+.paper-links a.accent:hover { color: #7C2A1E; }
 
 .hairline-rule {
   border: 0;

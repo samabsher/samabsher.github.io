@@ -3,14 +3,10 @@ title: "Research"
 pagetitle: "Research — Sam Absher"
 ---
 
-My work applies modern causal-inference methods — synthetic control, regression
-discontinuity, difference-in-differences — to questions in political economy,
-development, and public policy.
-
 ```{=html}
 <div class="section-label">Working papers</div>
 
-<div class="paper-card" style="border-left:4px solid var(--clay);">
+<div class="paper-card">
   <h3><a href="research/fences-and-fortunes/">Fences and Fortunes: The Effect of Enhanced Border Enforcement on El Paso</a></h3>
   <div class="meta">with Robin Grier and Kevin Grier · Under review</div>
   <p class="abstract">
@@ -22,7 +18,7 @@ development, and public policy.
     benefits.
   </p>
   <div class="paper-links">
-    <a class="primary" href="research/fences-and-fortunes/">Data companion</a>
+    <a class="primary accent" href="research/fences-and-fortunes/">Data companion</a>
     <a href="mailto:sam.r.absher@gmail.com?subject=Fences%20and%20Fortunes%20draft">Draft on request</a>
   </div>
 </div>
@@ -31,9 +27,11 @@ development, and public policy.
   <h3>Mobile Phones and Collective Violent Action: Evidence from the Libyan Revolution</h3>
   <div class="meta">with Kevin Grier · Working paper</div>
   <p class="abstract">
-    Did mobile-phone coverage shape where collective violence broke out during
-    the 2011 Libyan Revolution? We exploit the regime's own network blackouts to
-    find out.
+    What role did mobile phones play in the Arab Spring? Despite the fact
+    that communication technologies undoubtedly make it easier for groups to
+    coordinate, we find that mobile phone access led to fewer instances of
+    conflict in the Libyan Revolution. We discuss various mechanisms that
+    might explain the unanticipated reduction in violence.
   </p>
   <div class="paper-links">
     <a href="mailto:sam.r.absher@gmail.com?subject=Libya%20draft">Draft on request</a>
